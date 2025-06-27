@@ -10,13 +10,10 @@ const Header = ({ onSearch }) => {
 
   return (
     <nav className="navbar navbar-light bg-light sticky-top shadow">
-      <div className="container-fluid">
+      <div className="container p-2">
         <span className="navbar-brand d-flex align-items-center">
           <i className="fa-solid fa-car-on fa-lg text-primary me-2"></i>
           <span className="fw-bold">Smart Park</span>
-          <span className="text-muted ms-2 d-none d-md-inline">
-            React Edition
-          </span>
         </span>
         <div className="d-flex">
           <input
@@ -168,7 +165,7 @@ export default function SlotApp() {
 
   useEffect(() => {
     fetchData();
-    const intervalId = setInterval(fetchData, 5000);
+    const intervalId = setInterval(fetchData, 500);
     return () => clearInterval(intervalId);
   }, [fetchData]);
 
